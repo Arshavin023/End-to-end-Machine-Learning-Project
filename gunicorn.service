@@ -1,0 +1,14 @@
+[Unit]
+Description=machine learning web application
+After=network.target
+
+[Service]
+User=uchejudennodimaws
+Group=uchejudennodimaws
+WorkingDirectory=/home/uchejudennodimaws/app/src/
+Environment="PATH=/home/uchejudennodimaws/app/venv/bin"
+EnvironmentFile=/home/uchejudennodimaws/.env
+ExecStart=/home/uchejudennodimaws/app/venv/bin/gunicorn -w 4 -k uvicorn.workers.UvicornWorker application:app --bind 0.0.0.0:5000
+
+[Install]
+WantedBY=multi.user.target
