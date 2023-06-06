@@ -1,1 +1,2 @@
 ## End to End Machine Learning Project
+In this project, statistical analysis was performed on anonymized data of students’ performance to obtain insights on the data. The data was used to train supervised machine learning models (Linear Regression, XGBoost, CatBoost, Random Forest, AdaBoost, Decision Tree), and Hyperparameter Tuning was used to improve r2_score of the best model. The best model was integrated into a Flask web application, and deployed to Microsoft Azure Cloud in a CI/CD manner with GitHub actions.
